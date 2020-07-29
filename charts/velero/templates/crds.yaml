@@ -1,4 +1,4 @@
-{{- if and .Values.installCRDs }}
+{{- if .Values.installCRDs }}
 {{- range $path, $bytes := .Files.Glob "crds/*.yaml" }}
 {{ $.Files.Get $path }}
 ---
